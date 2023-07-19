@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = WFGrravarDadosMySql
-build_property.ProjectDir = C:\Users\mateus.slopes8\source\repos\WFGrravarDadosMySql\WFGrravarDadosMySql\
+build_property.ProjectDir = C:\Users\mateus.slopes8\source\repos\CRUD-CSHARP\WFGrravarDadosMySql\

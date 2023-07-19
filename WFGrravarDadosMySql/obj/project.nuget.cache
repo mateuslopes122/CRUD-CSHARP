@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nyt0VGg3XSUax9NKn+8pNHg/YK+D4khdTOaa5hjCF203M+tyLdm2DeQHsDQ5X7F0vxstQNWidiN+gqErUEYpZQ==",
+  "dgSpecHash": "oE0v9y5dvYvbmQ++3ZBMJsgTbG6PVtTpnfc5pDVl5b3Jx/4IthYJQpONVwZ9G/wHMUc5pnV51EoUUyKVoXa2BA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mateus.slopes8\\source\\repos\\WFGrravarDadosMySql\\WFGrravarDadosMySql\\WFGrravarDadosMySql.csproj",
+  "projectFilePath": "C:\\Users\\mateus.slopes8\\source\\repos\\CRUD-CSHARP\\WFGrravarDadosMySql\\WFGrravarDadosMySql.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mateus.slopes8\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\mateus.slopes8\\.nuget\\packages\\k4os.compression.lz4\\1.3.5\\k4os.compression.lz4.1.3.5.nupkg.sha512",

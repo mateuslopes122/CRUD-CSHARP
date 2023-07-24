@@ -18,6 +18,16 @@ namespace WFGrravarDadosMySql
         public Form1()
         {
             InitializeComponent();
+
+            lstContato.View = View.Details;
+            lstContato.AllowColumnReorder = true;
+            lstContato.FullRowSelect = true;
+            lstContato.GridLines = true;
+
+            lstContato.Columns.Add("ID", 30, HorizontalAlignment.Center);
+            lstContato.Columns.Add("Nome", 150, HorizontalAlignment.Center);
+            lstContato.Columns.Add("Email", 150, HorizontalAlignment.Center);
+            lstContato.Columns.Add("Telefone", 150, HorizontalAlignment.Center);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -29,22 +39,32 @@ namespace WFGrravarDadosMySql
         {
             try
             {
-                
+
                 Conexao = new MySqlConnection(data_source);
 
-                string sql = "INSERT INTO contato (nome,email,telefone)"+
-                    "VALUES "+
-                    "('"+txtNome.Text+"','"+txtEmail.Text+"' ,'"+txtTelefone.Text+"')";
-
-                MySqlCommand comando = new MySqlCommand(sql, Conexao);
                 Conexao.Open();
-                comando.ExecuteReader();
 
-                MessageBox.Show("Cadastro feito com sucesso!");
+                MySqlCommand cmd = new MySqlCommand();
+
+                cmd.Connection = Conexao;
+
+                cmd.CommandText = "INSERT INTO contato (nome,email,telefone) VALUES(@nome,@email,@telefone)";
+
+                
+                cmd.Parameters.AddWithValue("@nome", txtNome.Text);
+                cmd.Parameters.AddWithValue("@email", txtNome.Text);
+                cmd.Parameters.AddWithValue("@telefone", txtNome.Text);
+
+                cmd.Prepare();
+
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Contato inserido com sucesso!", "sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
-            catch(Exception ex)
+            catch(MySqlException ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Erro Ocorreu" + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -52,9 +72,6 @@ namespace WFGrravarDadosMySql
             }
 
 
-
-
-            
         }
 
         private void button2_Click(object sender, EventArgs e)
